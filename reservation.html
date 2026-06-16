@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reserve a Table | WAGYU SHOGUN | Royal Oak, Auckland</title>
+  <meta name="description" content="Reserve your table at WAGYU SHOGUN — A5 Kuroge Wagyu Yakiniku in Royal Oak, Auckland. Online booking only. We serve just 15–20 portions per session.">
+  <meta name="theme-color" content="#0A0A0A">
+  <meta property="og:title" content="Reserve a Table | WAGYU SHOGUN">
+  <meta property="og:description" content="Book your Wagyu Yakiniku experience in Royal Oak, Auckland. A5 Kagoshima Kuroge Wagyu. Online reservations only.">
+  <meta property="og:url" content="https://www.wagyushogun.com/reservation.html">
+  <meta property="og:type" content="restaurant">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    /* ============================================================
+       RESERVATION PAGE — ADDITIONAL STYLES
+       ============================================================ */
+
+    /* Page section wrapper */
+    .reservation-section {
+      padding: var(--section-py) var(--gutter);
+      background: var(--black);
+    }
+    .reservation-section::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(to right, transparent, rgba(201,168,76,0.18) 30%, rgba(201,168,76,0.18) 70%, transparent);
+    }
+    .reservation-inner {
+      max-width: 740px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    /* Section intro */
+    .reservation-intro {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+      margin-bottom: clamp(3rem, 7vw, 4.5rem);
+    }
+    .reservation-intro h2 {
+      color: var(--white);
+      font-size: clamp(1.6rem, 4vw, 2.8rem);
+    }
+    .reservation-note-bar {
+      background: var(--surface-2);
+      border-left: 2px solid var(--gold-dim);
+      padding: 1rem 1.4rem;
+      font-size: 0.78rem;
+      color: var(--white-dim);
+      line-height: 1.75;
+    }
+
+    /* Form layout */
+    .res-form {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    /* Field groups */
+    .field-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+      margin-bottom: 1.6rem;
+    }
+    .field-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+    @media (max-width: 560px) {
+      .field-row {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Labels */
+    .field-label {
+      display: block;
+      font-size: 0.6rem;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      line-height: 1;
+    }
+    .field-label .req {
+      color: var(--gold-light);
+      margin-left: 0.2em;
+    }
+    .field-optional {
+      font-size: 0.52rem;
+      color: var(--muted);
+      letter-spacing: 0.12em;
+      margin-left: 0.4em;
+      font-weight: 400;
+      text-transform: none;
+    }
+
+    /* Inputs, selects, textareas */
+    .res-input,
+    .res-select,
+    .res-textarea {
+      width: 100%;
+      min-height: 52px;
+      background: var(--surface-2);
+      border: 1px solid rgba(201,168,76,0.35);
+      color: var(--white);
+      font-family: var(--font-body);
+      font-size: 0.92rem;
+      padding: 0.75rem 1rem;
+      outline: none;
+      transition: border-color 0.25s, background 0.25s, box-shadow 0.25s;
+      -webkit-appearance: none;
+      appearance: none;
+      border-radius: 0;
+    }
+    .res-input::placeholder,
+    .res-textarea::placeholder {
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+    .res-input:focus,
+    .res-select:focus,
+    .res-textarea:focus {
+      border-color: var(--gold);
+      background: var(--surface-3);
+      box-shadow: 0 0 0 3px rgba(201,168,76,0.08);
+    }
+    .res-input:invalid:not(:placeholder-shown),
+    .res-select:invalid:not(:focus),
+    .res-textarea:invalid:not(:placeholder-shown) {
+      border-color: rgba(139,26,26,0.6);
+    }
+
+    /* Date input specific */
+    input[type="date"].res-input {
+      color-scheme: dark;
+    }
+    input[type="date"].res-input::-webkit-calendar-picker-indicator {
+      filter: invert(70%) sepia(30%) saturate(400%) hue-rotate(5deg);
+      opacity: 0.75;
+      cursor: pointer;
+    }
+
+    /* Select arrow */
+    .select-wrap {
+      position: relative;
+    }
+    .select-wrap::after {
+      content: '';
+      position: absolute;
+      right: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 0;
+      height: 0;
+      border-left: 4px solid transparent;
+      border-right: 4px solid transparent;
+      border-top: 5px solid var(--gold);
+      pointer-events: none;
+    }
+    .res-select {
+      padding-right: 2.5rem;
+      cursor: pointer;
+    }
+    .res-select option {
+      background: var(--surface-3);
+      color: var(--white);
+    }
+
+    /* Textarea */
+    .res-textarea {
+      min-height: 110px;
+      resize: vertical;
+      line-height: 1.65;
+    }
+
+    /* Section divider within form */
+    .form-divider {
+      height: 1px;
+      background: rgba(255,255,255,0.05);
+      margin: 0.8rem 0 2rem;
+    }
+    .form-section-label {
+      font-size: 0.55rem;
+      font-weight: 600;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 1.8rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .form-section-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: rgba(255,255,255,0.05);
+    }
+
+    /* Checkbox */
+    .checkbox-group {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.9rem;
+      padding: 1.4rem;
+      background: var(--surface-2);
+      border: 1px solid rgba(201,168,76,0.12);
+      margin-bottom: 2rem;
+      cursor: pointer;
+      transition: border-color 0.2s;
+    }
+    .checkbox-group:hover {
+      border-color: rgba(201,168,76,0.3);
+    }
+    .res-checkbox {
+      flex-shrink: 0;
+      width: 20px;
+      height: 20px;
+      margin-top: 2px;
+      -webkit-appearance: none;
+      appearance: none;
+      background: var(--surface-3);
+      border: 1px solid rgba(201,168,76,0.4);
+      cursor: pointer;
+      position: relative;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .res-checkbox:checked {
+      background: var(--gold);
+      border-color: var(--gold);
+    }
+    .res-checkbox:checked::after {
+      content: '';
+      position: absolute;
+      left: 5px;
+      top: 2px;
+      width: 6px;
+      height: 10px;
+      border: 2px solid var(--black);
+      border-top: none;
+      border-left: none;
+      transform: rotate(42deg);
+    }
+    .res-checkbox:focus {
+      box-shadow: 0 0 0 3px rgba(201,168,76,0.15);
+      outline: none;
+    }
+    .checkbox-label {
+      font-size: 0.8rem;
+      color: var(--white-dim);
+      line-height: 1.65;
+      cursor: pointer;
+    }
+
+    /* Submit button */
+    .res-submit-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+    .btn-res-submit {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 1rem 3rem;
+      min-height: 54px;
+      background: var(--gold);
+      color: var(--black);
+      font-family: var(--font-body);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s var(--ease-expo), transform 0.3s var(--ease-expo), box-shadow 0.3s;
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+    }
+    .btn-res-submit:hover {
+      background: var(--gold-light);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 36px rgba(201,168,76,0.22);
+    }
+    .btn-res-submit:active {
+      transform: translateY(0);
+    }
+    .submit-disclaimer {
+      font-size: 0.68rem;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    /* Success message */
+    .res-success {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 2rem;
+      padding: clamp(3rem, 8vw, 6rem) 1.5rem;
+    }
+    .res-success.visible {
+      display: flex;
+    }
+    .res-success-icon {
+      width: 72px;
+      height: 72px;
+      border: 1px solid var(--gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-size: 2rem;
+      color: var(--gold);
+    }
+    .res-success h2 {
+      color: var(--white);
+      font-size: clamp(1.5rem, 4vw, 2.4rem);
+    }
+    .res-success p {
+      max-width: 480px;
+      font-size: 0.92rem;
+      line-height: 1.85;
+    }
+
+    /* Required notice */
+    .required-note {
+      font-size: 0.65rem;
+      color: var(--muted);
+      margin-bottom: 2.2rem;
+    }
+    .required-note span {
+      color: var(--gold-light);
+    }
+  </style>
+</head>
+<body>
+
+<!-- GRAIN -->
+<div class="grain" aria-hidden="true"></div>
+
+<!-- SCROLL PROGRESS -->
+<div class="scroll-progress" aria-hidden="true"></div>
+
+<!-- CUSTOM CURSOR -->
+<div class="cursor-dot"  aria-hidden="true"></div>
+<div class="cursor-ring" aria-hidden="true"></div>
+
+<!-- LOADER -->
+<div class="loader" aria-hidden="true">
+  <div class="loader-inner">
+    <div class="loader-kanji">予約</div>
+    <div class="loader-logo">WAGYU SHOGUN</div>
+    <div class="loader-bar-wrap"><div class="loader-bar"></div></div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════
+     NAVIGATION
+══════════════════════════════ -->
+<header class="nav" role="banner">
+  <a href="/" class="nav-logo" aria-label="WAGYU SHOGUN Home">
+    <span class="nav-logo-main">WAGYU SHOGUN</span>
+    <span class="nav-logo-sub">和牛将軍 — Royal Oak, Auckland</span>
+  </a>
+  <nav class="nav-links" aria-label="Main navigation">
+    <a href="menu.html">Menu</a>
+    <a href="index.html#experience">Experience</a>
+    <a href="index.html#location">Visit</a>
+    <a href="our-journey.html">Our Journey</a>
+    <a href="careers.html">Careers</a>
+  </nav>
+  <a href="reservation.html" class="btn btn-gold nav-cta" aria-current="page">Reserve a Table</a>
+  <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<nav class="nav-mobile" aria-label="Mobile navigation">
+  <a href="menu.html">Menu</a>
+  <a href="index.html#experience">Experience</a>
+  <a href="index.html#location">Visit Us</a>
+  <a href="our-journey.html">Our Journey</a>
+  <a href="careers.html">Careers</a>
+  <a href="reservation.html" class="btn btn-gold">Reserve a Table</a>
+</nav>
+
+
+<!-- ══════════════════════════════
+     PAGE HERO
+══════════════════════════════ -->
+<section class="page-hero" data-kanji="予約" aria-label="Reservations">
+  <div class="page-hero-inner">
+    <p class="label fade-up">Online Booking · Royal Oak, Auckland</p>
+    <h1 class="fade-up fade-up-delay-1">Reservations</h1>
+    <p class="fade-up fade-up-delay-2">
+      We serve just 15–20 portions per session — reserve ahead to guarantee your seat.
+      Reservations accepted online only.
+    </p>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════
+     RESERVATION FORM
+══════════════════════════════ -->
+<section class="reservation-section" style="position:relative;">
+  <div class="reservation-inner">
+
+    <div class="reservation-intro fade-up">
+      <p class="label">Complete the form below</p>
+      <h2>Book Your Table</h2>
+      <div class="reservation-note-bar">
+        Online booking only — reservations are not accepted by phone.&nbsp;·&nbsp;
+        Cancellations require more than 24 hours notice.&nbsp;·&nbsp;
+        We will confirm your reservation by email within 24 hours.
+      </div>
+    </div>
+
+    <!-- SUCCESS MESSAGE (hidden until form is submitted) -->
+    <div class="res-success" id="resSuccess" role="alert" aria-live="polite">
+      <div class="res-success-icon" aria-hidden="true">✓</div>
+      <span class="label">Reservation Received</span>
+      <h2>Thank You!</h2>
+      <p>Thank you for your reservation request. We'll confirm by email within 24 hours.</p>
+      <a href="index.html" class="btn btn-outline">Return Home</a>
+    </div>
+
+    <!-- RESERVATION FORM -->
+    <form
+      class="res-form fade-up"
+      id="reservationForm"
+      action="#"
+      method="POST"
+      novalidate
+    >
+      <p class="required-note">Fields marked <span>*</span> are required.</p>
+
+      <!-- UTM hidden fields -->
+      <input type="hidden" name="utm_source"   id="utmSource">
+      <input type="hidden" name="utm_medium"   id="utmMedium">
+      <input type="hidden" name="utm_campaign" id="utmCampaign">
+
+      <!-- ─── 1. Name ─── -->
+      <div class="form-section-label">Personal Information</div>
+      <div class="field-row">
+        <div class="field-group">
+          <label class="field-label" for="firstName">First Name <span class="req" aria-label="required">*</span></label>
+          <input
+            class="res-input"
+            type="text"
+            id="firstName"
+            name="first_name"
+            placeholder="e.g. Alex"
+            autocomplete="given-name"
+            required
+          >
+        </div>
+        <div class="field-group">
+          <label class="field-label" for="lastName">Last Name <span class="req" aria-label="required">*</span></label>
+          <input
+            class="res-input"
+            type="text"
+            id="lastName"
+            name="last_name"
+            placeholder="e.g. Tanaka"
+            autocomplete="family-name"
+            required
+          >
+        </div>
+      </div>
+
+      <!-- ─── 2. Email ─── -->
+      <div class="field-group">
+        <label class="field-label" for="email">Email <span class="req" aria-label="required">*</span></label>
+        <input
+          class="res-input"
+          type="email"
+          id="email"
+          name="email"
+          placeholder="e.g. hello@example.com"
+          autocomplete="email"
+          required
+        >
+      </div>
+
+      <!-- ─── 3. Phone ─── -->
+      <div class="field-group">
+        <label class="field-label" for="phone">Phone <span class="req" aria-label="required">*</span></label>
+        <input
+          class="res-input"
+          type="tel"
+          id="phone"
+          name="phone"
+          placeholder="e.g. 021 123 4567"
+          autocomplete="tel"
+          required
+        >
+      </div>
+
+      <!-- ─── 4. Address ─── -->
+      <div class="field-group">
+        <label class="field-label" for="address">
+          Address <span class="field-optional">(optional)</span>
+        </label>
+        <input
+          class="res-input"
+          type="text"
+          id="address"
+          name="address"
+          placeholder="e.g. 12 Example Street, Auckland"
+          autocomplete="street-address"
+        >
+      </div>
+
+      <div class="form-divider"></div>
+      <!-- ─── 5–7. Reservation Details ─── -->
+      <div class="form-section-label">Reservation Details</div>
+
+      <!-- ─── 5. Date ─── -->
+      <div class="field-group">
+        <label class="field-label" for="resDate">Reservation Date <span class="req" aria-label="required">*</span></label>
+        <input
+          class="res-input"
+          type="date"
+          id="resDate"
+          name="reservation_date"
+          required
+        >
+      </div>
+
+      <!-- ─── 6. Preferred Time ─── -->
+      <div class="field-group">
+        <label class="field-label" for="prefTime">Preferred Time <span class="req" aria-label="required">*</span></label>
+        <div class="select-wrap">
+          <select class="res-select" id="prefTime" name="preferred_time" required>
+            <option value="" disabled selected>Select a session</option>
+            <option value="lunch">Lunch · 12:00pm – 2:30pm</option>
+            <option value="dinner">Dinner · 5:30pm – 9:00pm</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- ─── 7. Number of Guests ─── -->
+      <div class="field-group">
+        <label class="field-label" for="numGuests">Number of Guests <span class="req" aria-label="required">*</span></label>
+        <div class="select-wrap">
+          <select class="res-select" id="numGuests" name="num_guests" required>
+            <option value="" disabled selected>Select number of guests</option>
+            <option value="1">1 Guest</option>
+            <option value="2">2 Guests</option>
+            <option value="3">3 Guests</option>
+            <option value="4">4 Guests</option>
+            <option value="5">5 Guests</option>
+            <option value="6">6 Guests</option>
+            <option value="7">7 Guests</option>
+            <option value="8">8 Guests</option>
+            <option value="9">9 Guests</option>
+            <option value="10">10 Guests</option>
+            <option value="11">11 Guests</option>
+            <option value="12">12 Guests</option>
+            <option value="13">13 Guests</option>
+            <option value="14">14 Guests</option>
+            <option value="15">15 Guests</option>
+            <option value="16">16 Guests</option>
+            <option value="17">17 Guests</option>
+            <option value="18">18 Guests</option>
+            <option value="19">19 Guests</option>
+            <option value="20">20 Guests</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-divider"></div>
+      <!-- ─── 8–12. Additional Info ─── -->
+      <div class="form-section-label">Additional Information</div>
+
+      <!-- ─── 8. Birthday ─── -->
+      <div class="field-row">
+        <div class="field-group">
+          <label class="field-label" for="birthday">
+            Birthday <span class="field-optional">(optional · MM/DD)</span>
+          </label>
+          <input
+            class="res-input"
+            type="text"
+            id="birthday"
+            name="birthday"
+            placeholder="MM/DD"
+            maxlength="5"
+            pattern="^(0[1-9]|1[0-2])\/(0[1-9]|[12]\d|3[01])$"
+            autocomplete="off"
+          >
+        </div>
+
+        <!-- ─── 9. Gender ─── -->
+        <div class="field-group">
+          <label class="field-label" for="gender">
+            Title <span class="field-optional">(optional)</span>
+          </label>
+          <div class="select-wrap">
+            <select class="res-select" id="gender" name="gender">
+              <option value="" selected>Prefer not to say</option>
+              <option value="mr">Mr.</option>
+              <option value="ms">Ms.</option>
+              <option value="mx">Mx.</option>
+              <option value="none">Prefer not to say</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- ─── 10. Allergies ─── -->
+      <div class="field-group">
+        <label class="field-label" for="allergies">
+          Allergies &amp; Dietary Requirements <span class="field-optional">(optional)</span>
+        </label>
+        <textarea
+          class="res-textarea"
+          id="allergies"
+          name="allergies"
+          placeholder="Please list any allergies or dietary requirements (e.g. gluten-free, nut allergy, vegetarian…)"
+        ></textarea>
+      </div>
+
+      <!-- ─── 11. Voucher Code ─── -->
+      <div class="field-group">
+        <label class="field-label" for="voucherCode">
+          Voucher Code <span class="field-optional">(optional)</span>
+        </label>
+        <input
+          class="res-input"
+          type="text"
+          id="voucherCode"
+          name="voucher_code"
+          placeholder="Enter voucher code if applicable"
+          autocomplete="off"
+        >
+      </div>
+
+      <!-- ─── 12. Special Requests ─── -->
+      <div class="field-group">
+        <label class="field-label" for="specialRequests">
+          Special Requests <span class="field-optional">(optional)</span>
+        </label>
+        <textarea
+          class="res-textarea"
+          id="specialRequests"
+          name="special_requests"
+          placeholder="Celebrating a special occasion? Let us know and we'll do our best to accommodate you."
+        ></textarea>
+      </div>
+
+      <div class="form-divider"></div>
+
+      <!-- ─── 13. Mailing List ─── -->
+      <label class="checkbox-group" for="mailingList">
+        <input
+          class="res-checkbox"
+          type="checkbox"
+          id="mailingList"
+          name="mailing_list"
+          value="yes"
+          checked
+        >
+        <span class="checkbox-label">
+          Yes, I'd like to receive special offers and updates from WAGYU SHOGUN.
+        </span>
+      </label>
+
+      <!-- ─── Submit ─── -->
+      <div class="res-submit-wrap">
+        <button class="btn-res-submit" type="submit">
+          Request Reservation
+        </button>
+        <p class="submit-disclaimer">
+          By submitting this form you agree to our
+          <a href="terms-and-conditions.html" style="color:var(--gold-light);">Terms &amp; Conditions</a>
+          and <a href="privacy-policy.html" style="color:var(--gold-light);">Privacy Policy</a>.
+          Reservations are not confirmed until you receive an email from us.
+        </p>
+      </div>
+
+    </form><!-- /res-form -->
+
+  </div><!-- /reservation-inner -->
+</section>
+
+
+<!-- ══════════════════════════════
+     FOOTER
+══════════════════════════════ -->
+<footer role="contentinfo">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div>
+        <div class="footer-logo-main">WAGYU SHOGUN</div>
+        <div class="footer-logo-sub">和牛将軍</div>
+      </div>
+      <p>JA-certified A5 Kagoshima Kuroge Wagyu &amp; Iwate Iwachiku Wagyu. Authentic self-style Yakiniku in Royal Oak, Auckland.</p>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/wagyushogun/" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+        <a href="https://www.facebook.com/wagyushogun/" target="_blank" rel="noopener" aria-label="Facebook">FB</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="index.html#experience">The Experience</a></li>
+        <li><a href="our-journey.html">Our Journey</a></li>
+        <li><a href="careers.html">Careers</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Visit</h4>
+      <ul>
+        <li><a href="index.html#location">726 Manukau Road</a></li>
+        <li><a href="index.html#location">Royal Oak, Auckland 1023</a></li>
+        <li><a href="tel:+6496505050">09 650 5050</a></li>
+        <li><a href="mailto:hello@wagyushogun.com">hello@wagyushogun.com</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Reserve</h4>
+      <ul>
+        <li><a href="reservation.html">Book a Table</a></li>
+        <li><a href="reservation.html">Group Dining</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 WAGYU SHOGUN. All rights reserved. Royal Oak, Auckland, New Zealand.</p>
+    <div class="footer-legal">
+      <a href="terms-and-conditions.html">Terms &amp; Conditions</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+
+
+<script src="js/main.js"></script>
+
+<script>
+  /* ============================================================
+     RESERVATION PAGE — INLINE SCRIPTS
+     ============================================================ */
+
+  // ── UTM parameter capture ──────────────────────────────────
+  (function () {
+    var params = new URLSearchParams(window.location.search);
+    var src      = params.get('utm_source')   || '';
+    var medium   = params.get('utm_medium')   || '';
+    var campaign = params.get('utm_campaign') || '';
+
+    var srcEl      = document.getElementById('utmSource');
+    var medEl      = document.getElementById('utmMedium');
+    var campEl     = document.getElementById('utmCampaign');
+
+    if (srcEl)   srcEl.value      = src;
+    if (medEl)   medEl.value      = medium;
+    if (campEl)  campEl.value     = campaign;
+  })();
+
+  // ── Set date picker minimum to today ──────────────────────
+  (function () {
+    var dateInput = document.getElementById('resDate');
+    if (dateInput) {
+      var today = new Date();
+      var yyyy  = today.getFullYear();
+      var mm    = String(today.getMonth() + 1).padStart(2, '0');
+      var dd    = String(today.getDate()).padStart(2, '0');
+      dateInput.min = yyyy + '-' + mm + '-' + dd;
+    }
+  })();
+
+  // ── Form submission → success message ────────────────────
+  document.getElementById('reservationForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    // Basic HTML5 validation gate
+    if (!this.checkValidity()) {
+      this.reportValidity();
+      return;
+    }
+
+    // Hide form, show success
+    this.style.display = 'none';
+    var success = document.getElementById('resSuccess');
+    success.classList.add('visible');
+    success.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+
+  // ── Nav scroll behaviour (mirrors main.js where not loaded yet) ──
+  (function () {
+    var nav = document.querySelector('.nav');
+    if (!nav) return;
+    function onScroll() {
+      if (window.scrollY > 20) {
+        nav.classList.add('scrolled');
+      } else {
+        nav.classList.remove('scrolled');
+      }
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  })();
+
+  // ── Hamburger toggle ──────────────────────────────────────
+  (function () {
+    var btn     = document.querySelector('.nav-hamburger');
+    var mobileNav = document.querySelector('.nav-mobile');
+    if (!btn || !mobileNav) return;
+    btn.addEventListener('click', function () {
+      var isOpen = btn.classList.toggle('open');
+      mobileNav.classList.toggle('open', isOpen);
+      btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+  })();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy | WAGYU SHOGUN | Royal Oak, Auckland</title>
+  <meta name="description" content="Privacy Policy for WAGYU SHOGUN — how we collect, use, and protect your personal information in accordance with the New Zealand Privacy Act 2020.">
+  <meta name="theme-color" content="#0A0A0A">
+  <meta property="og:title" content="Privacy Policy | WAGYU SHOGUN">
+  <meta property="og:description" content="Privacy Policy for WAGYU SHOGUN, Royal Oak, Auckland — NZ Privacy Act 2020 compliant.">
+  <meta property="og:url" content="https://www.wagyushogun.com/privacy-policy.html">
+  <meta property="og:type" content="website">
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    /* ── Privacy Policy page styles ── */
+
+    .page-hero {
+      background: linear-gradient(to bottom, rgba(10,10,10,0.4) 0%, rgba(10,10,10,0.85) 60%, rgba(10,10,10,1) 100%),
+                  linear-gradient(140deg, #1e1108 0%, #0e0b09 30%, #0a0a0a 65%, #0d0b09 100%);
+      padding: 9rem 2rem 5rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .page-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: repeating-linear-gradient(
+        -45deg,
+        transparent,
+        transparent 40px,
+        rgba(201,168,76,0.018) 40px,
+        rgba(201,168,76,0.018) 41px
+      );
+      pointer-events: none;
+    }
+
+    .page-hero-kanji {
+      font-family: Impact, 'Arial Black', sans-serif;
+      font-size: clamp(4rem, 10vw, 8rem);
+      color: rgba(201, 168, 76, 0.06);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      white-space: nowrap;
+      user-select: none;
+      pointer-events: none;
+      letter-spacing: 0.1em;
+    }
+
+    .page-hero-label {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold, #C9A84C);
+      margin-bottom: 1rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .page-hero h1 {
+      font-family: Impact, 'Arial Black', sans-serif;
+      font-size: clamp(2.4rem, 6vw, 4.5rem);
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #fff;
+      margin: 0;
+      line-height: 1.1;
+      position: relative;
+      z-index: 1;
+    }
+
+    .page-hero-meta {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.35);
+      margin-top: 1.2rem;
+      letter-spacing: 0.05em;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ── Policy content wrapper ── */
+    .policy-wrap {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 5rem 2rem 7rem;
+    }
+
+    .policy-intro {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 1.05rem;
+      line-height: 1.9;
+      color: rgba(255,255,255,0.72);
+      border-left: 3px solid var(--gold, #C9A84C);
+      padding-left: 1.4rem;
+      margin-bottom: 3.5rem;
+    }
+
+    /* ── Section headings ── */
+    .policy-section {
+      margin-bottom: 3rem;
+    }
+
+    .policy-section h2 {
+      font-family: Impact, 'Arial Black', sans-serif;
+      font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #fff;
+      padding-bottom: 0.6rem;
+      border-bottom: 2px solid var(--gold, #C9A84C);
+      margin-bottom: 1.2rem;
+      display: flex;
+      align-items: baseline;
+      gap: 0.7rem;
+    }
+
+    .policy-section h2 .section-num {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.7rem;
+      letter-spacing: 0.18em;
+      color: var(--gold, #C9A84C);
+      font-weight: 400;
+    }
+
+    .policy-section p,
+    .policy-section li {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.95rem;
+      line-height: 1.9;
+      color: rgba(255,255,255,0.68);
+      margin-bottom: 0.85rem;
+    }
+
+    .policy-section ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 1rem 0;
+    }
+
+    .policy-section ul li {
+      padding-left: 1.4rem;
+      position: relative;
+    }
+
+    .policy-section ul li::before {
+      content: '✦';
+      position: absolute;
+      left: 0;
+      color: var(--gold, #C9A84C);
+      font-size: 0.5rem;
+      top: 0.55em;
+    }
+
+    .policy-section a {
+      color: var(--gold, #C9A84C);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(201,168,76,0.35);
+      transition: border-color 0.2s;
+    }
+
+    .policy-section a:hover {
+      border-color: var(--gold, #C9A84C);
+    }
+
+    /* ── Contact box ── */
+    .policy-contact-box {
+      background: rgba(201,168,76,0.05);
+      border: 1px solid rgba(201,168,76,0.18);
+      border-radius: 2px;
+      padding: 1.6rem 1.8rem;
+      margin-top: 1rem;
+    }
+
+    .policy-contact-box p {
+      margin-bottom: 0.4rem !important;
+    }
+
+    .policy-contact-box strong {
+      color: rgba(255,255,255,0.88);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    /* ── Divider ── */
+    .policy-divider {
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--gold, #C9A84C), transparent);
+      margin: 3rem 0;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 600px) {
+      .page-hero {
+        padding: 8rem 1.2rem 4rem;
+      }
+
+      .policy-wrap {
+        padding: 3.5rem 1.2rem 5rem;
+      }
+
+      .policy-section h2 {
+        flex-direction: column;
+        gap: 0.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- GRAIN -->
+<div class="grain" aria-hidden="true"></div>
+
+<!-- SCROLL PROGRESS -->
+<div class="scroll-progress" aria-hidden="true"></div>
+
+<!-- CUSTOM CURSOR -->
+<div class="cursor-dot"  aria-hidden="true"></div>
+<div class="cursor-ring" aria-hidden="true"></div>
+
+
+<!-- ══════════════════════════════
+     NAVIGATION
+══════════════════════════════ -->
+<header class="nav" role="banner">
+  <a href="/" class="nav-logo" aria-label="WAGYU SHOGUN Home">
+    <span class="nav-logo-main">WAGYU SHOGUN</span>
+    <span class="nav-logo-sub">和牛将軍 — Royal Oak, Auckland</span>
+  </a>
+  <nav class="nav-links" aria-label="Main navigation">
+    <a href="menu.html">Menu</a>
+    <a href="index.html#experience">Experience</a>
+    <a href="index.html#location">Visit</a>
+    <a href="our-journey.html">Our Journey</a>
+    <a href="careers.html">Careers</a>
+  </nav>
+  <a href="reservation.html" class="btn btn-gold nav-cta">Reserve a Table</a>
+  <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<nav class="nav-mobile" aria-label="Mobile navigation">
+  <a href="menu.html">Menu</a>
+  <a href="index.html#experience">Experience</a>
+  <a href="index.html#location">Visit Us</a>
+  <a href="our-journey.html">Our Journey</a>
+  <a href="careers.html">Careers</a>
+  <a href="reservation.html" class="btn btn-gold">Reserve a Table</a>
+</nav>
+
+
+<!-- ══════════════════════════════
+     PAGE HERO
+══════════════════════════════ -->
+<section class="page-hero" aria-label="Privacy Policy">
+  <div class="page-hero-kanji" aria-hidden="true">個人情報</div>
+  <p class="page-hero-label">Legal &nbsp;·&nbsp; WAGYU SHOGUN</p>
+  <h1>Privacy Policy</h1>
+  <p class="page-hero-meta">Last Updated: June 2026 &nbsp;·&nbsp; NZ Privacy Act 2020</p>
+</section>
+
+
+<!-- ══════════════════════════════
+     POLICY CONTENT
+══════════════════════════════ -->
+<main>
+  <div class="policy-wrap">
+
+    <p class="policy-intro">
+      At WAGYU SHOGUN, we respect your privacy and are committed to protecting
+      the personal information you share with us. This Privacy Policy explains
+      how we collect, use, store, and safeguard your information in accordance
+      with the New Zealand Privacy Act 2020.
+    </p>
+
+
+    <!-- 1. Introduction -->
+    <div class="policy-section">
+      <h2><span class="section-num">01</span> Introduction</h2>
+      <p>
+        WAGYU SHOGUN (&ldquo;we&rdquo;, &ldquo;us&rdquo;, or &ldquo;our&rdquo;) operates as a restaurant
+        business located at 726 Manukau Road, Royal Oak, Auckland 1023, New Zealand.
+        We offer dining experiences, online reservations, and related services through
+        our website at <a href="https://www.wagyushogun.com" target="_blank" rel="noopener">www.wagyushogun.com</a>.
+      </p>
+      <p>
+        This Privacy Policy applies to all personal information collected by WAGYU SHOGUN
+        through our website, reservation systems, in-restaurant operations, and any other
+        channels through which you interact with us. By using our services, you consent
+        to the collection and use of your personal information as described in this policy.
+      </p>
+      <p>
+        We comply with the New Zealand Privacy Act 2020 and its Information Privacy
+        Principles (IPPs). If you have any questions about this policy or how we handle
+        your information, please contact us using the details at the end of this document.
+      </p>
+    </div>
+
+    <div class="policy-divider"></div>
+
+
+    <!-- 2. Information We Collect -->
+    <div class="policy-section">
+      <h2><span class="section-num">02</span> Information We Collect</h2>
+      <p>
+        We may collect the following categories of personal information when you make
+        a reservation, contact us, or use our website:
+      </p>
+      <ul>
+        <li><strong style="color:rgba(255,255,255,0.85);">Full name</strong> — to identify you and personalise your dining experience.</li>
+        <li><strong style="color:rgba(255,255,255,0.85);">Phone number</strong> — for reservation confirmation and contact purposes.</li>
+        <li><strong style="color:rgba(255,255,255,0.85);">Postal address</strong> — where relevant to your interactions with us.</li>
+        <li><strong style="color:rgba(255,255,255,0.85);">Email address</strong> — for reservation confirmations, communications, and marketing (where you have opted in).</li>
+        <li><strong style="color:rgba(255,255,255,0.85);">Date of birth</strong> — to recognise special occasions and offer birthday benefits where applicable.</li>
+        <li><strong style="color:rgba(255,255,255,0.85);">Gender</strong> — to help us tailor our communications where you choose to provide it.</li>
+        <li><strong style="color:rgba(255,255,255,0.85);">Dietary requirements and allergy information</strong> — to ensure your safety and to accommodate your needs during your visit. This may include sensitive health information and is handled with the utmost care.</li>
+        <li><strong style="color:rgba(255,255,255,0.85);">Reservation details</strong> — including date, time, party size, and any special requests.</li>
+        <li><strong style="color:rgba(255,255,255,0.85);">UTM tracking data</strong> — information about how you arrived at our website (e.g. via a marketing campaign, social media, or search engine), collected automatically through URL parameters.</li>
+      </ul>
+      <p>
+        We only collect personal information that is necessary for our business functions
+        and activities. You are not required to provide all information requested, but
+        some services — such as reservations — may not be available if essential details
+        are not provided.
+      </p>
+    </div>
+
+    <div class="policy-divider"></div>
+
+
+    <!-- 3. How We Use Your Information -->
+    <div class="policy-section">
+      <h2><span class="section-num">03</span> How We Use Your Information</h2>
+      <p>
+        We use the personal information we collect for the following purposes:
+      </p>
+      <ul>
+        <li><strong style="color:rgba(255,255,255,0.85);">Reservation management</strong> — processing and confirming table bookings, managing waitlists, and following up on reservations.</li>
+        <li><strong style="color:rgba(255,255,255,0.85);">Customer service</strong> — responding to enquiries, resolving issues, and providing assistance before, during, and after your visit.</li>
+        <li><strong style="color:rgba(255,255,255,0.85);">Safety and dietary needs</strong> — ensuring that allergy and dietary information is communicated to our kitchen team to keep you safe.</li>
+        <li><strong style="color:rgba(255,255,255,0.85);">Special occasion recognition</strong> — using date of birth information to acknowledge birthdays and other milestones.</li>
+        <li><strong style="color:rgba(255,255,255,0.85);">Marketing communications</strong> — sending you news, special offers, and updates about WAGYU SHOGUN, where you have given your consent to receive such communications.</li>
+        <li><strong style="color:rgba(255,255,255,0.85);">Service improvement</strong> — analysing usage patterns and customer feedback to improve our services, website, and overall dining experience.</li>
+        <li><strong style="color:rgba(255,255,255,0.85);">Legal obligations</strong> — complying with applicable New Zealand laws and regulations.</li>
+      </ul>
+      <p>
+        We will not use your personal information for any purpose that is incompatible
+        with the reason it was originally collected, without first seeking your consent.
+      </p>
+    </div>
+
+    <div class="policy-divider"></div>
+
+
+    <!-- 4. Marketing Communications -->
+    <div class="policy-section">
+      <h2><span class="section-num">04</span> Marketing Communications</h2>
+      <p>
+        From time to time, we may invite you to join our mailing list to receive
+        updates, seasonal menus, special offers, and exclusive dining events at
+        WAGYU SHOGUN. Subscribing to our mailing list is entirely optional and
+        separate from your reservation or dining activity.
+      </p>
+      <p>
+        When you subscribe to our mailing list — either through our website,
+        in-restaurant sign-up, or by opting in during the reservation process —
+        we will use your email address and name to send you relevant communications.
+        We aim to make every communication valuable and relevant to your interests.
+      </p>
+      <p>
+        <strong style="color:rgba(255,255,255,0.85);">You can opt out at any time.</strong>
+        Every marketing email we send includes an unsubscribe link at the bottom
+        of the message. Clicking this link will immediately remove you from our
+        mailing list, and you will receive no further marketing communications from us.
+        Alternatively, you may contact us directly at
+        <a href="mailto:hello@wagyushogun.com">hello@wagyushogun.com</a>
+        to request removal from our list.
+      </p>
+      <p>
+        Please note that operational communications — such as reservation confirmations
+        or important notices relating to your booking — are not marketing communications
+        and will still be sent even if you unsubscribe from marketing.
+      </p>
+    </div>
+
+    <div class="policy-divider"></div>
+
+
+    <!-- 5. Data Storage & Security -->
+    <div class="policy-section">
+      <h2><span class="section-num">05</span> Data Storage &amp; Security</h2>
+      <p>
+        We take the security of your personal information seriously. We implement
+        appropriate technical and organisational measures to protect your data
+        against unauthorised access, loss, misuse, alteration, or disclosure.
+        These measures include:
+      </p>
+      <ul>
+        <li>Secure storage of data on reputable, industry-standard platforms with encryption at rest and in transit.</li>
+        <li>Limiting access to personal information to staff members who need it to perform their job functions.</li>
+        <li>Regular review of our data security practices.</li>
+        <li>Using secure connections (HTTPS) on our website.</li>
+      </ul>
+      <p>
+        <strong style="color:rgba(255,255,255,0.85);">We will never sell your personal information to third parties.</strong>
+        Your data is used solely for the purposes described in this policy and will
+        not be shared with, sold to, or traded with any other business, organisation,
+        or individual for commercial gain.
+      </p>
+      <p>
+        While we take all reasonable precautions, no method of transmission or
+        electronic storage is 100% secure. If you believe your information has
+        been compromised, please contact us immediately.
+      </p>
+    </div>
+
+    <div class="policy-divider"></div>
+
+
+    <!-- 6. Cookies & Tracking -->
+    <div class="policy-section">
+      <h2><span class="section-num">06</span> Cookies &amp; Tracking</h2>
+      <p>
+        Our website uses limited tracking technologies to improve your experience
+        and to help us understand how visitors use our site.
+      </p>
+      <p>
+        <strong style="color:rgba(255,255,255,0.85);">Google Maps</strong> — Our website embeds Google Maps to display our restaurant
+        location. When you view a page containing a Google Maps embed, Google may set
+        cookies on your device and collect information in accordance with
+        <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.
+        We do not control the cookies set by Google Maps.
+      </p>
+      <p>
+        <strong style="color:rgba(255,255,255,0.85);">UTM Tracking Parameters</strong> — When you visit our website via a link from
+        a marketing campaign, social media post, or email, the URL may contain UTM
+        (Urchin Tracking Module) parameters (e.g., <code style="font-family:Arial,monospace;font-size:0.85em;color:rgba(201,168,76,0.9);">utm_source</code>,
+        <code style="font-family:Arial,monospace;font-size:0.85em;color:rgba(201,168,76,0.9);">utm_medium</code>,
+        <code style="font-family:Arial,monospace;font-size:0.85em;color:rgba(201,168,76,0.9);">utm_campaign</code>).
+        We use this data to understand which of our marketing efforts are most effective,
+        so we can focus on providing you with the most relevant content and offers.
+        This data does not identify you personally.
+      </p>
+      <p>
+        Most web browsers allow you to control cookies through their settings. You
+        can choose to block or delete cookies; however, doing so may affect the
+        functionality of some parts of our website.
+      </p>
+    </div>
+
+    <div class="policy-divider"></div>
+
+
+    <!-- 7. Third Party Services -->
+    <div class="policy-section">
+      <h2><span class="section-num">07</span> Third Party Services</h2>
+      <p>
+        We may use trusted third-party services to help us operate our business.
+        These include:
+      </p>
+      <ul>
+        <li>
+          <strong style="color:rgba(255,255,255,0.85);">Reservation and booking platforms</strong> — we may use third-party reservation
+          management software to process your booking. These providers are bound by
+          their own privacy policies and contractual obligations to handle your data
+          securely and in accordance with applicable law.
+        </li>
+        <li>
+          <strong style="color:rgba(255,255,255,0.85);">Payment processing</strong> — if payment is collected online or in-restaurant via
+          a third-party payment processor, that processor is responsible for the
+          security of payment card information. We do not store credit or debit card
+          details on our systems.
+        </li>
+        <li>
+          <strong style="color:rgba(255,255,255,0.85);">Google Maps</strong> — embedded mapping service provided by Google LLC.
+          Please refer to <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>
+          for information on how Google handles data collected through Maps embeds.
+        </li>
+        <li>
+          <strong style="color:rgba(255,255,255,0.85);">Email marketing platforms</strong> — if you subscribe to our mailing list,
+          your email address and name may be stored and managed on a third-party
+          email marketing platform. These platforms operate under their own privacy
+          policies and data processing agreements.
+        </li>
+      </ul>
+      <p>
+        We only share your information with third parties to the extent necessary to
+        provide you with our services. We do not authorise third parties to use your
+        personal information for their own marketing purposes.
+      </p>
+    </div>
+
+    <div class="policy-divider"></div>
+
+
+    <!-- 8. Your Rights -->
+    <div class="policy-section">
+      <h2><span class="section-num">08</span> Your Rights</h2>
+      <p>
+        Under the New Zealand Privacy Act 2020, you have the following rights in
+        relation to your personal information held by WAGYU SHOGUN:
+      </p>
+      <ul>
+        <li>
+          <strong style="color:rgba(255,255,255,0.85);">Right of access</strong> — you have the right to request access to the personal
+          information we hold about you. We will respond to your request within
+          20 working days.
+        </li>
+        <li>
+          <strong style="color:rgba(255,255,255,0.85);">Right of correction</strong> — if you believe that any personal information
+          we hold about you is inaccurate, incomplete, or out of date, you have the
+          right to request that we correct it.
+        </li>
+        <li>
+          <strong style="color:rgba(255,255,255,0.85);">Right to request deletion</strong> — you may request that we delete your
+          personal information where it is no longer necessary for the purposes for
+          which it was collected, subject to any legal obligations requiring retention.
+        </li>
+        <li>
+          <strong style="color:rgba(255,255,255,0.85);">Right to withdraw consent</strong> — where our processing is based on your
+          consent (such as marketing emails), you may withdraw that consent at any
+          time without affecting the lawfulness of prior processing.
+        </li>
+        <li>
+          <strong style="color:rgba(255,255,255,0.85);">Right to make a complaint</strong> — if you believe we have breached the
+          Privacy Act 2020 or handled your personal information in a way that is
+          inconsistent with this policy, you may contact us directly or lodge a
+          complaint with the
+          <a href="https://www.privacy.org.nz" target="_blank" rel="noopener">Office of the Privacy Commissioner</a>
+          at <a href="https://www.privacy.org.nz" target="_blank" rel="noopener">www.privacy.org.nz</a>.
+        </li>
+      </ul>
+      <p>
+        To exercise any of these rights, please contact us using the details provided
+        in the Contact Us section below. We may need to verify your identity before
+        processing your request.
+      </p>
+    </div>
+
+    <div class="policy-divider"></div>
+
+
+    <!-- 9. Data Retention -->
+    <div class="policy-section">
+      <h2><span class="section-num">09</span> Data Retention</h2>
+      <p>
+        We retain your personal information only for as long as necessary to fulfil
+        the purposes for which it was collected, or as required by law.
+      </p>
+      <ul>
+        <li>
+          <strong style="color:rgba(255,255,255,0.85);">Reservation data</strong> — information related to your bookings (including name,
+          contact details, dietary requirements, and party size) is retained for a
+          reasonable period following your visit to support customer service, resolve
+          any disputes, and comply with our legal and accounting obligations. This
+          is generally up to seven years in line with New Zealand tax and business
+          record-keeping requirements.
+        </li>
+        <li>
+          <strong style="color:rgba(255,255,255,0.85);">Marketing data</strong> — your email address and name on our mailing list will
+          be retained until you unsubscribe or request deletion.
+        </li>
+        <li>
+          <strong style="color:rgba(255,255,255,0.85);">Allergy and health information</strong> — sensitive dietary and allergy
+          information collected at the time of your reservation is retained only for
+          as long as it is relevant to your dining history with us.
+        </li>
+      </ul>
+      <p>
+        When personal information is no longer required, we will securely delete or
+        anonymise it in accordance with our data management practices.
+      </p>
+    </div>
+
+    <div class="policy-divider"></div>
+
+
+    <!-- 10. Contact Us -->
+    <div class="policy-section">
+      <h2><span class="section-num">10</span> Contact Us</h2>
+      <p>
+        If you have any questions, concerns, or requests relating to this Privacy
+        Policy or the way we handle your personal information, please contact us:
+      </p>
+
+      <div class="policy-contact-box">
+        <p><strong>WAGYU SHOGUN</strong></p>
+        <p>726 Manukau Road, Royal Oak, Auckland 1023, New Zealand</p>
+        <p>
+          Email: <a href="mailto:hello@wagyushogun.com">hello@wagyushogun.com</a>
+        </p>
+        <p>
+          Phone: <a href="tel:+6496505050">09 650 5050</a>
+        </p>
+        <p>
+          Website: <a href="https://www.wagyushogun.com" target="_blank" rel="noopener">www.wagyushogun.com</a>
+        </p>
+      </div>
+
+      <p style="margin-top:1.5rem;">
+        We will endeavour to respond to all privacy-related enquiries within
+        20 working days. If you are not satisfied with our response, you have
+        the right to contact the
+        <a href="https://www.privacy.org.nz" target="_blank" rel="noopener">Office of the Privacy Commissioner</a>
+        at <a href="https://www.privacy.org.nz" target="_blank" rel="noopener">www.privacy.org.nz</a>
+        or by calling 0800 803 909.
+      </p>
+    </div>
+
+    <div class="policy-divider"></div>
+
+    <p style="font-family:Arial,Helvetica,sans-serif;font-size:0.78rem;color:rgba(255,255,255,0.28);line-height:1.7;">
+      This Privacy Policy was last updated in June 2026. We reserve the right to update
+      or modify this policy at any time. The most current version will always be available
+      on our website at
+      <a href="https://www.wagyushogun.com/privacy-policy.html" style="color:rgba(201,168,76,0.55);border-bottom:1px solid rgba(201,168,76,0.2);">www.wagyushogun.com/privacy-policy.html</a>.
+      Continued use of our services following any changes constitutes acceptance of
+      the updated policy.
+    </p>
+
+  </div>
+</main>
+
+
+<!-- ══════════════════════════════
+     FOOTER
+══════════════════════════════ -->
+<footer role="contentinfo">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div>
+        <div class="footer-logo-main">WAGYU SHOGUN</div>
+        <div class="footer-logo-sub">和牛将軍</div>
+      </div>
+      <p>JA-certified A5 Kagoshima Kuroge Wagyu &amp; Iwate Iwachiku Wagyu. Authentic self-style Yakiniku in Royal Oak, Auckland.</p>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/wagyushogun/" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+        <a href="https://www.facebook.com/wagyushogun/" target="_blank" rel="noopener" aria-label="Facebook">FB</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="index.html#experience">The Experience</a></li>
+        <li><a href="our-journey.html">Our Journey</a></li>
+        <li><a href="careers.html">Careers</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Visit</h4>
+      <ul>
+        <li><a href="index.html#location">726 Manukau Road</a></li>
+        <li><a href="index.html#location">Royal Oak, Auckland 1023</a></li>
+        <li><a href="tel:+6496505050">09 650 5050</a></li>
+        <li><a href="mailto:hello@wagyushogun.com">hello@wagyushogun.com</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Reserve</h4>
+      <ul>
+        <li><a href="reservation.html" target="_blank" rel="noopener">Book a Table</a></li>
+        <li><a href="reservation.html" target="_blank" rel="noopener">Group Dining</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 WAGYU SHOGUN. All rights reserved. Royal Oak, Auckland, New Zealand.</p>
+    <div class="footer-legal">
+      <a href="terms-and-conditions.html">Terms &amp; Conditions</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
