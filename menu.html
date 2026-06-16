@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu — WAGYU SHOGUN | A5 Kuroge Wagyu Yakiniku | Auckland</title>
+  <meta name="description" content="Lunch and dinner set menus. A5 Kagoshima Kuroge Wagyu, Iwate Iwachiku Wagyu, and Wagyu Sukiyaki. Royal Oak, Auckland.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="grain" aria-hidden="true"></div>
+<div class="scroll-progress" aria-hidden="true"></div>
+<div class="cursor-dot" aria-hidden="true"></div>
+<div class="cursor-ring" aria-hidden="true"></div>
+
+<!-- NAV -->
+<header class="nav" role="banner">
+  <a href="/" class="nav-logo" aria-label="WAGYU SHOGUN Home">
+    <span class="nav-logo-main">WAGYU SHOGUN</span>
+    <span class="nav-logo-sub">和牛将軍 — Royal Oak, Auckland</span>
+  </a>
+  <nav class="nav-links" aria-label="Main navigation">
+    <a href="menu.html" style="color:var(--gold);">Menu</a>
+    <a href="/#experience">Experience</a>
+    <a href="/#location">Visit</a>
+    <a href="our-journey.html">Our Journey</a>
+    <a href="careers.html">Careers</a>
+  </nav>
+  <a href="https://www.wagyushogun.com/booking" class="btn btn-gold nav-cta" target="_blank" rel="noopener">Reserve a Table</a>
+  <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</header>
+<nav class="nav-mobile" aria-label="Mobile navigation">
+  <a href="/">Home</a>
+  <a href="menu.html">Menu</a>
+  <a href="/#location">Visit Us</a>
+  <a href="our-journey.html">Our Journey</a>
+  <a href="careers.html">Careers</a>
+  <a href="https://www.wagyushogun.com/booking" class="btn btn-gold" target="_blank" rel="noopener">Reserve a Table</a>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero" data-kanji="菜">
+  <div class="page-hero-inner">
+    <p class="label">Lunch &amp; Dinner · Served Daily</p>
+    <h1>Our Menu</h1>
+    <p>Every set is built around JA-certified A5 Kagoshima Kuroge Wagyu or award-winning Iwate Iwachiku Wagyu — grilled at your table, your way.</p>
+  </div>
+</section>
+
+<!-- INCLUDES BOX -->
+<section style="padding:3rem var(--section-px);background:var(--surface-1);border-bottom:1px solid rgba(201,168,76,0.12);">
+  <div style="max-width:var(--max-w);margin:0 auto;">
+    <div class="menu-includes-box fade-up">
+      <h3>Every Set Menu Includes</h3>
+      <ul class="menu-includes-grid">
+        <li>Unlimited steamed rice</li>
+        <li>Unlimited miso soup</li>
+        <li>Seasonal vegetables</li>
+        <li>House-made BBQ sauce</li>
+        <li>Yuzu kosho</li>
+        <li>Wasabi</li>
+        <li>Wagyu beef curry</li>
+        <li>Seasonal dessert</li>
+      </ul>
+      <p style="margin-top:1.2rem;font-size:0.78rem;color:var(--muted);">
+        Yakiniku sets: 125g premium Wagyu cut &nbsp;·&nbsp; Sukiyaki set: 150g A5 Wagyu &nbsp;·&nbsp;
+        All menu items subject to change &nbsp;·&nbsp; 15–20 portions per session
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- WEEKDAY LUNCH SPECIAL BANNER -->
+<div style="background:rgba(201,168,76,0.08);border-top:1px solid rgba(201,168,76,0.2);border-bottom:1px solid rgba(201,168,76,0.2);padding:1rem var(--section-px);">
+  <div style="max-width:var(--max-w);margin:0 auto;display:flex;align-items:center;gap:1rem;flex-wrap:wrap;">
+    <span class="label" style="font-size:0.6rem;">Weekday Lunch Special</span>
+    <span style="font-family:var(--font-display);font-size:1.1rem;color:var(--white);">A5 Wagyu Sukiyaki — Mon–Fri Lunch Only</span>
+    <span style="font-size:0.85rem;color:var(--muted);text-decoration:line-through;">$30.80</span>
+    <span style="font-family:var(--font-display);font-size:1.4rem;color:var(--gold-light);">$24.80</span>
+  </div>
+</div>
+
+<!-- MENU CONTENT -->
+<main class="menu-page">
+  <div class="menu-page-inner">
+
+    <!-- ── LUNCH ── -->
+    <div class="menu-section">
+      <div class="menu-section-header">
+        <p class="label">Lunch Service</p>
+        <h2 class="fade-up">Lunch Sets</h2>
+        <div class="menu-section-line"></div>
+      </div>
+      <p style="color:var(--white-dim);font-size:0.82rem;margin-bottom:2rem;">
+        Mon–Fri 12:00pm – 2:30pm (last order 2:00pm) &nbsp;·&nbsp; Sat–Sun 12:00pm – 3:00pm (last order 2:30pm)
+      </p>
+
+      <div class="menu-items">
+
+        <div class="menu-item fade-up">
+          <div class="menu-item-left">
+            <div class="menu-item-name">A5 Wagyu Sukiyaki</div>
+            <div class="menu-item-name-jp">A5 和牛すきやき &nbsp;·&nbsp; 150g</div>
+            <div class="menu-item-desc">150g A5 Kagoshima Wagyu simmered in a rich, sweet soy-dashi sukiyaki broth. The weekday lunch price is a special reduction — available Mon–Fri only at the discounted rate.</div>
+          </div>
+          <div class="menu-item-right">
+            <div style="display:flex;align-items:baseline;gap:0.5rem;">
+              <span style="font-size:0.75rem;color:var(--muted);text-decoration:line-through;">$30.80</span>
+              <div class="menu-item-price">$24.80</div>
+            </div>
+            <div class="menu-item-price-note">Mon–Fri lunch only</div>
+          </div>
+        </div>
+
+        <div class="menu-item fade-up">
+          <div class="menu-item-left">
+            <div class="menu-item-name">A5 Wagyu Sukiyaki + Drink</div>
+            <div class="menu-item-name-jp">A5 和牛すきやき + ドリンク &nbsp;·&nbsp; 150g</div>
+            <div class="menu-item-desc">Sukiyaki set with your choice of soft drink included.</div>
+          </div>
+          <div class="menu-item-right">
+            <div class="menu-item-price">$27.80</div>
+          </div>
+        </div>
+
+        <div class="menu-item fade-up">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Iwate Iwachiku Wagyu Yakiniku</div>
+            <div class="menu-item-name-jp">岩手いわちく和牛 焼肉 &nbsp;·&nbsp; 125g</div>
+            <div class="menu-item-desc">Award-winning Iwate Iwachiku Wagyu from northern Honshu — a bold, distinctive flavour profile grilled at your table.</div>
+          </div>
+          <div class="menu-item-right">
+            <div class="menu-item-price">$39.80</div>
+          </div>
+        </div>
+
+        <div class="menu-item fade-up">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Iwate Iwachiku Wagyu Yakiniku + Drink</div>
+            <div class="menu-item-name-jp">岩手いわちく和牛 焼肉 + ドリンク &nbsp;·&nbsp; 125g</div>
+            <div class="menu-item-desc">Iwate Wagyu Yakiniku with your choice of soft drink included.</div>
+          </div>
+          <div class="menu-item-right">
+            <div class="menu-item-price">$42.80</div>
+          </div>
+        </div>
+
+        <div class="menu-item fade-up">
+          <div class="menu-item-left">
+            <div class="menu-item-name">A5 Kagoshima + Iwate Wagyu Yakiniku</div>
+            <div class="menu-item-name-jp">A5 鹿児島 + 岩手和牛 焼肉 &nbsp;·&nbsp; 125g</div>
+            <div class="menu-item-badge">Chef's Selection</div>
+            <div class="menu-item-desc">The ultimate tasting flight — JA-certified A5 Kagoshima Kuroge and Iwate Iwachiku side by side. The best way to taste the full range.</div>
+          </div>
+          <div class="menu-item-right">
+            <div class="menu-item-price">$44.80</div>
+          </div>
+        </div>
+
+        <div class="menu-item fade-up">
+          <div class="menu-item-left">
+            <div class="menu-item-name">A5 Kagoshima + Iwate Wagyu Yakiniku + Drink</div>
+            <div class="menu-item-name-jp">A5 鹿児島 + 岩手和牛 焼肉 + ドリンク</div>
+            <div class="menu-item-badge">Chef's Selection</div>
+            <div class="menu-item-desc">Dual Wagyu tasting set with your choice of soft drink included.</div>
+          </div>
+          <div class="menu-item-right">
+            <div class="menu-item-price">$47.80</div>
+          </div>
+        </div>
+
+        <div class="menu-item fade-up">
+          <div class="menu-item-left">
+            <div class="menu-item-name">A5 Kagoshima Kuroge Wagyu Yakiniku</div>
+            <div class="menu-item-name-jp">A5 鹿児島黒毛和牛 焼肉 &nbsp;·&nbsp; 125g</div>
+            <div class="menu-item-badge">Signature</div>
+            <div class="menu-item-desc">The pinnacle. JA-certified A5 Kagoshima Kuroge Washu — Japan's highest-graded beef, extraordinary marbling, grilled at your table.</div>
+          </div>
+          <div class="menu-item-right">
+            <div class="menu-item-price">$49.80</div>
+          </div>
+        </div>
+
+        <div class="menu-item fade-up">
+          <div class="menu-item-left">
+            <div class="menu-item-name">A5 Kagoshima Kuroge Wagyu Yakiniku + Drink</div>
+            <div class="menu-item-name-jp">A5 鹿児島黒毛和牛 焼肉 + ドリンク &nbsp;·&nbsp; 125g</div>
+            <div class="menu-item-badge">Signature</div>
+            <div class="menu-item-desc">Our signature A5 Kagoshima Yakiniku set with your choice of soft drink included.</div>
+          </div>
+          <div class="menu-item-right">
+            <div class="menu-item-price">$52.80</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ── DINNER ── -->
+    <div class="menu-section">
+      <div class="menu-section-header">
+        <p class="label">Dinner Service</p>
+        <h2 class="fade-up">Dinner Sets</h2>
+        <div class="menu-section-line"></div>
+      </div>
+      <p style="color:var(--white-dim);font-size:0.82rem;margin-bottom:2rem;">
+        Mon–Sun 5:30pm – 9:00pm (last order 8:30pm)
+      </p>
+      <div style="background:var(--surface-2);border-left:2px solid rgba(201,168,76,0.3);padding:1.5rem 2rem;font-size:0.88rem;color:var(--white-dim);line-height:1.8;">
+        All dinner sets mirror the lunch selection — same cuts, same inclusions, same prices.
+        Choose your preferred Wagyu and enjoy the evening experience.<br>
+        <span style="color:var(--muted);font-size:0.78rem;">Note: A5 Wagyu Sukiyaki weekday lunch pricing applies to lunch only.</span>
+      </div>
+    </div>
+
+    <!-- ── ADD-ON ── -->
+    <div class="menu-section">
+      <div class="menu-section-header">
+        <p class="label">Add-on</p>
+        <h2 class="fade-up">Extra Cut</h2>
+        <div class="menu-section-line"></div>
+      </div>
+      <p style="color:var(--white-dim);font-size:0.82rem;margin-bottom:2rem;">
+        Available only as an addition to any set menu — cannot be ordered standalone.
+      </p>
+      <div class="menu-items">
+        <div class="menu-item fade-up">
+          <div class="menu-item-left">
+            <div class="menu-item-name">A5 Kagoshima Kuroge Wagyu — Extra Cut</div>
+            <div class="menu-item-name-jp">A5 鹿児島黒毛和牛 追加 &nbsp;·&nbsp; 60g</div>
+            <div class="menu-item-desc">An additional 60g of A5 Kagoshima Kuroge Wagyu to complement any set. Add-on only — not available standalone.</div>
+          </div>
+          <div class="menu-item-right">
+            <div class="menu-item-price">$19.90</div>
+            <div class="menu-item-price-note">60g · Add-on only</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<!-- RESERVE CTA -->
+<section class="reserve">
+  <div class="reserve-inner">
+    <span class="gold-line center fade-up"></span>
+    <p class="label fade-up">Reservations</p>
+    <h2 class="fade-up fade-up-delay-1">Ready to Experience<br>Wagyu Shogun?</h2>
+    <p class="fade-up fade-up-delay-2">15–20 portions per session. Reserve to guarantee your seat.</p>
+    <a href="https://www.wagyushogun.com/booking" class="btn btn-gold fade-up fade-up-delay-2" target="_blank" rel="noopener">Book a Table Online</a>
+    <p class="reserve-note fade-up fade-up-delay-3">Online booking only · Cancellations require 24+ hours notice.</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer role="contentinfo">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div><div class="footer-logo-main">WAGYU SHOGUN</div><div class="footer-logo-sub">和牛将軍</div></div>
+      <p>JA-certified A5 Kagoshima Kuroge Wagyu &amp; Iwate Iwachiku Wagyu. Authentic self-style Yakiniku in Royal Oak, Auckland.</p>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/wagyushogun/" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+        <a href="https://www.facebook.com/wagyushogun/" target="_blank" rel="noopener" aria-label="Facebook">FB</a>
+      </div>
+    </div>
+    <div class="footer-col"><h4>Explore</h4><ul><li><a href="/">Home</a></li><li><a href="menu.html">Menu</a></li><li><a href="our-journey.html">Our Journey</a></li><li><a href="careers.html">Careers</a></li></ul></div>
+    <div class="footer-col"><h4>Visit</h4><ul><li><a href="/#location">726 Manukau Road</a></li><li><a href="/#location">Royal Oak, Auckland 1023</a></li><li><a href="tel:+6496505050">09 650 5050</a></li><li><a href="mailto:hello@wagyushogun.com">hello@wagyushogun.com</a></li></ul></div>
+    <div class="footer-col"><h4>Reserve</h4><ul><li><a href="https://www.wagyushogun.com/booking" target="_blank" rel="noopener">Book a Table</a></li></ul></div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 WAGYU SHOGUN. All rights reserved. Royal Oak, Auckland, New Zealand.</p>
+    <div class="footer-legal">
+      <a href="https://www.wagyushogun.com/terms-and-conditions" target="_blank" rel="noopener">Terms</a>
+      <a href="https://www.wagyushogun.com/privacy-policy" target="_blank" rel="noopener">Privacy</a>
+      <a href="https://www.wagyushogun.com/refund-policy" target="_blank" rel="noopener">Refund Policy</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

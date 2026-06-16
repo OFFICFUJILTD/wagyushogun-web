@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WAGYU SHOGUN | A5 Kuroge Wagyu Yakiniku | Royal Oak, Auckland</title>
+  <meta name="description" content="Auckland's authentic A5 Kuroge Wagyu Yakiniku. JA-certified Kagoshima Kuroge Wagyu sourced directly via ZEN-NOH. Not all Wagyu is equal. Royal Oak, Auckland.">
+  <meta name="theme-color" content="#0A0A0A">
+  <meta property="og:title" content="WAGYU SHOGUN | A5 Kuroge Wagyu Yakiniku | Auckland">
+  <meta property="og:description" content="Not all Wagyu is equal. JA-certified A5 Kagoshima Kuroge Wagyu — from farm to grill, in Royal Oak, Auckland.">
+  <meta property="og:url" content="https://www.wagyushogun.com">
+  <meta property="og:type" content="restaurant">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- GRAIN -->
+<div class="grain" aria-hidden="true"></div>
+
+<!-- SCROLL PROGRESS -->
+<div class="scroll-progress" aria-hidden="true"></div>
+
+<!-- CUSTOM CURSOR -->
+<div class="cursor-dot"  aria-hidden="true"></div>
+<div class="cursor-ring" aria-hidden="true"></div>
+
+<!-- LOADER -->
+<div class="loader" aria-hidden="true">
+  <div class="loader-inner">
+    <div class="loader-kanji">和牛</div>
+    <div class="loader-logo">WAGYU SHOGUN</div>
+    <div class="loader-bar-wrap"><div class="loader-bar"></div></div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════
+     NAVIGATION
+══════════════════════════════ -->
+<header class="nav" role="banner">
+  <a href="/" class="nav-logo" aria-label="WAGYU SHOGUN Home">
+    <span class="nav-logo-main">WAGYU SHOGUN</span>
+    <span class="nav-logo-sub">和牛将軍 — Royal Oak, Auckland</span>
+  </a>
+  <nav class="nav-links" aria-label="Main navigation">
+    <a href="menu.html">Menu</a>
+    <a href="#experience">Experience</a>
+    <a href="#location">Visit</a>
+    <a href="our-journey.html">Our Journey</a>
+    <a href="careers.html">Careers</a>
+  </nav>
+  <a href="https://www.wagyushogun.com/booking" class="btn btn-gold nav-cta" target="_blank" rel="noopener">Reserve a Table</a>
+  <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<nav class="nav-mobile" aria-label="Mobile navigation">
+  <a href="menu.html">Menu</a>
+  <a href="#experience">Experience</a>
+  <a href="#location">Visit Us</a>
+  <a href="our-journey.html">Our Journey</a>
+  <a href="careers.html">Careers</a>
+  <a href="https://www.wagyushogun.com/booking" class="btn btn-gold" target="_blank" rel="noopener">Reserve a Table</a>
+</nav>
+
+
+<!-- ══════════════════════════════
+     HERO
+══════════════════════════════ -->
+<section class="hero" aria-label="Hero">
+  <!--
+    📸 PHOTO: ヒーロー背景画像をここに設定してください
+    style に background-image: url('images/hero.jpg') を追加するだけです。
+    推奨サイズ: 1920×1080px 以上、暗めの照明の料理・和牛写真
+  -->
+  <div class="hero-bg" aria-hidden="true"
+    style="background-image:
+      linear-gradient(to bottom, rgba(10,10,10,0.1) 0%, rgba(10,10,10,0.5) 50%, rgba(10,10,10,0.97) 100%),
+      linear-gradient(140deg, #1e1108 0%, #0e0b09 30%, #0a0a0a 65%, #0d0b09 100%);">
+  </div>
+
+  <div class="hero-content">
+    <p class="label hero-label">A5 Kuroge Wagyu Yakiniku &nbsp;·&nbsp; Royal Oak, Auckland</p>
+
+    <h1>
+      <span class="line-wrap"><span>Japanese Style</span></span>
+      <span class="line-wrap"><span>Yakiniku.</span></span>
+      <em>Not All Wagyu<br>Is Equal.</em>
+    </h1>
+
+    <p class="hero-sub">
+      JA-certified A5 Kagoshima Kuroge Wagyu, sourced directly from
+      ZEN-NOH farms in Japan — brought to your table in Royal Oak,
+      Auckland. Authentic self-style Yakiniku. Strictly 15–20 portions per session.
+    </p>
+
+    <div class="hero-cta">
+      <a href="https://www.wagyushogun.com/booking" class="btn btn-gold" target="_blank" rel="noopener">Reserve a Table</a>
+      <a href="menu.html" class="btn btn-outline">View the Menu</a>
+    </div>
+  </div>
+
+  <div class="hero-scroll" aria-hidden="true">
+    <span>Scroll</span>
+    <div class="hero-scroll-line"></div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════
+     MARQUEE
+══════════════════════════════ -->
+<div class="marquee-section" aria-hidden="true">
+  <div class="marquee-track">
+    <span>A5 Kagoshima Kuroge Wagyu</span><span class="marquee-sep">✦</span>
+    <span>JA Certified · ZEN-NOH</span><span class="marquee-sep">✦</span>
+    <span>Iwate Iwachiku Wagyu</span><span class="marquee-sep">✦</span>
+    <span>Royal Oak, Auckland</span><span class="marquee-sep">✦</span>
+    <span>Authentic Yakiniku</span><span class="marquee-sep">✦</span>
+    <span>From Farm to Grill</span><span class="marquee-sep">✦</span>
+    <span>Not All Wagyu Is Equal</span><span class="marquee-sep">✦</span>
+    <span>15–20 Portions Per Session</span><span class="marquee-sep">✦</span>
+    <!-- loop -->
+    <span>A5 Kagoshima Kuroge Wagyu</span><span class="marquee-sep">✦</span>
+    <span>JA Certified · ZEN-NOH</span><span class="marquee-sep">✦</span>
+    <span>Iwate Iwachiku Wagyu</span><span class="marquee-sep">✦</span>
+    <span>Royal Oak, Auckland</span><span class="marquee-sep">✦</span>
+    <span>Authentic Yakiniku</span><span class="marquee-sep">✦</span>
+    <span>From Farm to Grill</span><span class="marquee-sep">✦</span>
+    <span>Not All Wagyu Is Equal</span><span class="marquee-sep">✦</span>
+    <span>15–20 Portions Per Session</span><span class="marquee-sep">✦</span>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════
+     BRAND STATEMENT
+══════════════════════════════ -->
+<section class="statement" style="position:relative;overflow:hidden;">
+  <div style="position:absolute;inset:0;background-image:repeating-linear-gradient(-45deg,transparent,transparent 40px,rgba(201,168,76,0.018) 40px,rgba(201,168,76,0.018) 41px);pointer-events:none;"></div>
+  <div class="statement-inner" style="position:relative;z-index:1;">
+    <span class="gold-line center"></span>
+    <p class="label fade-up">Our Philosophy</p>
+    <h2 class="fade-up fade-up-delay-1">
+      From <strong>passionate farmers</strong><br>
+      to <strong>your grill.</strong>
+    </h2>
+    <p class="fade-up fade-up-delay-2">
+      WAGYU SHOGUN brings JA-certified A5 Kagoshima Kuroge Wagyu
+      directly from ZEN-NOH (JA Group) farms in Japan to Royal Oak,
+      Auckland. Every detail — the sourcing, the preparation, the
+      experience — is designed for one purpose: authentic self-style
+      Yakiniku, done without compromise.
+    </p>
+    <span class="gold-line center"></span>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════
+     GALLERY
+══════════════════════════════ -->
+<section class="gallery-section" id="gallery">
+  <div class="gallery-section-header">
+    <div class="gallery-section-header-left">
+      <p class="label fade-up">At the Table</p>
+      <h2 class="fade-up fade-up-delay-1">The Experience.</h2>
+    </div>
+    <span class="gallery-drag-hint fade-up">Drag to explore</span>
+  </div>
+
+  <div class="gallery-track">
+    <!--
+      📸 PHOTO: 各アイテムの <div> 内に
+      <img class="gallery-item-img" src="images/gallery-X.jpg" alt="説明"> を追加してください。
+      推奨: 700×900px JPG、暗めの料理・店内写真
+    -->
+    <div class="gallery-item gallery-item-bg-1">
+      <div class="gallery-item-overlay"></div>
+      <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;">
+        <span style="font-family:var(--font-display);font-size:clamp(5rem,12vw,9rem);color:rgba(201,168,76,0.07);user-select:none;letter-spacing:0.1em;">A5</span>
+      </div>
+      <div class="gallery-item-label">A5 Kuroge Wagyu</div>
+    </div>
+
+    <div class="gallery-item gallery-item-bg-2">
+      <div class="gallery-item-overlay"></div>
+      <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;">
+        <span style="font-family:var(--font-display);font-size:clamp(4rem,10vw,7rem);color:rgba(201,168,76,0.06);user-select:none;letter-spacing:0.1em;">炭火</span>
+      </div>
+      <div class="gallery-item-label">Table-side Yakiniku</div>
+    </div>
+
+    <div class="gallery-item gallery-item-bg-3">
+      <div class="gallery-item-overlay"></div>
+      <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;">
+        <span style="font-family:var(--font-display);font-size:clamp(4rem,10vw,7rem);color:rgba(201,168,76,0.06);user-select:none;">鹿児島</span>
+      </div>
+      <div class="gallery-item-label">Kagoshima Origin</div>
+    </div>
+
+    <div class="gallery-item gallery-item-bg-4">
+      <div class="gallery-item-overlay"></div>
+      <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;">
+        <span style="font-family:var(--font-display);font-size:clamp(4rem,10vw,7rem);color:rgba(201,168,76,0.06);user-select:none;">すき焼き</span>
+      </div>
+      <div class="gallery-item-label">Wagyu Sukiyaki</div>
+    </div>
+
+    <div class="gallery-item gallery-item-bg-5">
+      <div class="gallery-item-overlay"></div>
+      <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;">
+        <span style="font-family:var(--font-display);font-size:clamp(4rem,10vw,7rem);color:rgba(201,168,76,0.06);user-select:none;">岩手</span>
+      </div>
+      <div class="gallery-item-label">Iwate Iwachiku</div>
+    </div>
+
+    <div class="gallery-item gallery-item-bg-6">
+      <div class="gallery-item-overlay"></div>
+      <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;">
+        <span style="font-family:var(--font-display);font-size:clamp(4rem,10vw,7rem);color:rgba(201,168,76,0.06);user-select:none;">将軍</span>
+      </div>
+      <div class="gallery-item-label">The Shogun Experience</div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════
+     ORIGIN / WAGYU STORY
+══════════════════════════════ -->
+<section class="origin" id="wagyu">
+  <div class="origin-inner">
+
+    <div class="origin-visual clip-reveal" style="clip-path:inset(0 100% 0 0);">
+      <div class="origin-visual-inner">
+        <div class="origin-visual-text">和牛<br>将軍</div>
+      </div>
+      <div class="origin-badge">
+        <div class="origin-badge-grade">A5</div>
+        <div class="origin-badge-text">JA Certified · Kagoshima</div>
+      </div>
+    </div>
+
+    <div class="origin-content">
+      <p class="label fade-up">Direct from Japan</p>
+      <h2 class="fade-up fade-up-delay-1">
+        JA-Certified.<br>ZEN-NOH Sourced.
+      </h2>
+      <p class="fade-up fade-up-delay-2">
+        Our Kagoshima Kuroge Wagyu is sourced directly through ZEN-NOH
+        (JA Group) — Japan's national agricultural cooperative —
+        guaranteeing A5 grade certification on every cut.
+        Iwate Iwachiku Wagyu completes the selection, adding another
+        dimension of award-winning flavour.
+      </p>
+
+      <div class="origin-stats">
+        <div class="fade-up">
+          <div class="stat-num">A5</div>
+          <div class="stat-label">JA Certified Grade</div>
+        </div>
+        <div class="fade-up fade-up-delay-1">
+          <div class="stat-num">15</div>
+          <div class="stat-label">Portions Per Session</div>
+        </div>
+        <div class="fade-up fade-up-delay-2">
+          <div class="stat-num">100%</div>
+          <div class="stat-label">Authentic Kuroge Washu</div>
+        </div>
+      </div>
+
+      <p class="fade-up fade-up-delay-3">
+        From the farms of Kagoshima and Iwate, through ZEN-NOH's direct
+        supply chain, to the grill at your table in Royal Oak —
+        every step is taken with the same care as the cattle themselves.
+      </p>
+      <a href="our-journey.html" class="btn btn-outline fade-up fade-up-delay-3">Our Story</a>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════
+     MENU PREVIEW
+══════════════════════════════ -->
+<section class="menu-preview" id="menu">
+  <div class="menu-preview-inner">
+
+    <div class="section-header">
+      <div class="section-header-left">
+        <p class="label fade-up">Lunch &amp; Dinner · Daily</p>
+        <h2 class="fade-up fade-up-delay-1">Set Menus</h2>
+      </div>
+      <a href="menu.html" class="btn btn-outline fade-up">Full Menu</a>
+    </div>
+
+    <div class="menu-grid">
+
+      <div class="menu-card fade-up">
+        <span class="menu-card-tag">Signature · Yakiniku</span>
+        <h3>A5 Kagoshima<br>Kuroge Wagyu</h3>
+        <p class="menu-card-desc">
+          125g of JA-certified A5 Kagoshima Kuroge Wagyu — Japan's
+          finest beef grade — grilled at your table.
+        </p>
+        <div class="menu-card-includes">
+          <span>125g A5 Kuroge Wagyu cut</span>
+          <span>Unlimited rice &amp; miso soup</span>
+          <span>Seasonal vegetables</span>
+          <span>House-made BBQ sauce</span>
+          <span>Wagyu curry &amp; dessert</span>
+        </div>
+        <div class="menu-card-price">
+          <span class="price-from">from</span>
+          <span class="price-amount">$49.80</span>
+        </div>
+      </div>
+
+      <div class="menu-card menu-card-featured fade-up fade-up-delay-1">
+        <span class="menu-card-tag">Chef's Selection · Most Popular</span>
+        <h3>A5 Kagoshima<br>+ Iwate Wagyu</h3>
+        <p class="menu-card-desc">
+          Two of Japan's finest — A5 Kagoshima Kuroge and Iwate
+          Iwachiku Wagyu side by side. The definitive tasting set.
+        </p>
+        <div class="menu-card-includes">
+          <span>125g A5 Kagoshima Kuroge Wagyu</span>
+          <span>Iwate Iwachiku Wagyu</span>
+          <span>Unlimited rice &amp; miso</span>
+          <span>Full set accompaniments</span>
+          <span>Wagyu curry &amp; dessert</span>
+        </div>
+        <div class="menu-card-price">
+          <span class="price-from">from</span>
+          <span class="price-amount">$44.80</span>
+        </div>
+      </div>
+
+      <div class="menu-card fade-up fade-up-delay-2">
+        <span class="menu-card-tag">Weekday Lunch Special</span>
+        <h3>A5 Wagyu<br>Sukiyaki</h3>
+        <p class="menu-card-desc">
+          150g A5 Wagyu simmered in a rich sweet soy-dashi broth.
+          Weekday lunch special: reduced from $30.80.
+        </p>
+        <div class="menu-card-includes">
+          <span>150g A5 Wagyu in sukiyaki broth</span>
+          <span>Unlimited rice &amp; miso</span>
+          <span>Seasonal vegetables</span>
+          <span>Wagyu curry &amp; dessert</span>
+        </div>
+        <div class="menu-card-price">
+          <span style="font-size:0.75rem;color:var(--muted);text-decoration:line-through;margin-right:0.3rem;">$30.80</span>
+          <span class="price-amount">$24.80</span>
+        </div>
+      </div>
+
+    </div>
+
+    <p class="menu-note fade-up">
+      All Yakiniku sets include 125g premium Wagyu cut · Unlimited rice &amp; miso soup ·
+      Seasonal vegetables · House-made BBQ sauce &amp; condiments ·
+      Wagyu curry gravy · Seasonal dessert.
+      Sukiyaki set: 150g. Add-on: A5 Kagoshima extra 60g — $19.90.
+      <a href="menu.html" style="color:var(--gold-light);">→ Full menu &amp; prices</a>
+    </p>
+
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════
+     EXPERIENCE
+══════════════════════════════ -->
+<section class="experience" id="experience">
+  <div class="experience-inner">
+
+    <div class="experience-content">
+      <p class="label fade-up">Self-style Yakiniku</p>
+      <h2 class="fade-up fade-up-delay-1">Your Wagyu,<br>Your Grill.</h2>
+      <p class="fade-up fade-up-delay-2">
+        Yakiniku is a ritual, not a performance. At WAGYU SHOGUN,
+        your A5 Wagyu arrives fresh and you control the grill —
+        your timing, your temperature, your experience.
+        Intimate by design: we serve just 15–20 portions per session.
+      </p>
+      <a href="https://www.wagyushogun.com/booking" class="btn btn-gold fade-up fade-up-delay-3" target="_blank" rel="noopener">
+        Reserve Your Table
+      </a>
+    </div>
+
+    <div class="experience-steps">
+      <div class="step">
+        <div class="step-num">01</div>
+        <div class="step-content">
+          <h4>Arrive &amp; Be Seated</h4>
+          <p>Your personal table grill is ready. No rush, no noise — just the quiet anticipation of what's coming. Your server walks you through everything.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <div class="step-content">
+          <h4>Select Your Cut</h4>
+          <p>A5 Kagoshima Kuroge, Iwate Iwachiku, or the classic Sukiyaki — each sourced direct from JA-certified farms in Japan.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <div class="step-content">
+          <h4>Grill at Your Table</h4>
+          <p>Your Wagyu arrives fresh, prepared for the grill. Cook to your preferred doneness — the act of grilling is inseparable from the pleasure of eating.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">04</div>
+        <div class="step-content">
+          <h4>Savour Every Bite</h4>
+          <p>Unlimited miso, rice, yuzu kosho, house BBQ sauce, Wagyu curry, seasonal dessert. Unhurried, unforgettable. As it should be.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════
+     RESERVE CTA
+══════════════════════════════ -->
+<section class="reserve" id="reserve">
+  <div class="reserve-inner">
+    <span class="gold-line center fade-up"></span>
+    <p class="label fade-up fade-up-delay-1">Reservations</p>
+    <h2 class="fade-up fade-up-delay-2">
+      Secure Your Table<br>at WAGYU SHOGUN.
+    </h2>
+    <p class="fade-up fade-up-delay-2">
+      We serve just 15–20 portions per session — reserve ahead
+      to guarantee your seat.
+    </p>
+    <a href="https://www.wagyushogun.com/booking" class="btn btn-gold fade-up fade-up-delay-3" target="_blank" rel="noopener">
+      Book a Table Online
+    </a>
+    <p class="reserve-note fade-up fade-up-delay-3">
+      Online booking only — reservations not accepted by phone.&nbsp;·&nbsp;
+      Cancellations require more than 24 hours notice.
+    </p>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════
+     LOCATION & HOURS
+══════════════════════════════ -->
+<section class="location" id="location">
+  <div class="location-inner">
+
+    <div class="location-info">
+      <div>
+        <p class="label fade-up">Find Us</p>
+        <h2 class="fade-up fade-up-delay-1">Royal Oak,<br>Auckland.</h2>
+      </div>
+
+      <div class="info-block">
+        <div class="info-item fade-up">
+          <span class="info-item-label">Address</span>
+          <span class="info-item-value">
+            726 Manukau Road<br>
+            Royal Oak, Auckland 1023<br>
+            New Zealand
+          </span>
+        </div>
+        <div class="info-item fade-up fade-up-delay-1">
+          <span class="info-item-label">Phone</span>
+          <span class="info-item-value">
+            <a href="tel:+6496505050" style="color:inherit;">09 650 5050</a><br>
+            <span style="font-size:0.72rem;color:var(--muted);">Reservations by online booking only</span>
+          </span>
+        </div>
+        <div class="info-item fade-up fade-up-delay-2">
+          <span class="info-item-label">Email</span>
+          <span class="info-item-value">
+            <a href="mailto:hello@wagyushogun.com" style="color:var(--gold-light);">hello@wagyushogun.com</a>
+          </span>
+        </div>
+      </div>
+
+      <div class="hours-grid fade-up fade-up-delay-2">
+        <div class="hours-block">
+          <h4>Mon – Fri</h4>
+          <div class="hours-row">
+            <span>Lunch</span>
+            <span>12:00 – 2:30pm<br><span style="font-size:0.65rem;color:var(--muted);">LO 2:00pm</span></span>
+          </div>
+          <div class="hours-row">
+            <span>Dinner</span>
+            <span>5:30 – 9:00pm<br><span style="font-size:0.65rem;color:var(--muted);">LO 8:30pm</span></span>
+          </div>
+        </div>
+        <div class="hours-block">
+          <h4>Sat – Sun</h4>
+          <div class="hours-row">
+            <span>Lunch</span>
+            <span>12:00 – 3:00pm<br><span style="font-size:0.65rem;color:var(--muted);">LO 2:30pm</span></span>
+          </div>
+          <div class="hours-row">
+            <span>Dinner</span>
+            <span>5:30 – 9:00pm<br><span style="font-size:0.65rem;color:var(--muted);">LO 8:30pm</span></span>
+          </div>
+        </div>
+      </div>
+      <p style="font-size:0.72rem;color:var(--muted);margin-top:-1rem;" class="fade-up">
+        * Hours subject to public holiday closures.
+      </p>
+    </div>
+
+    <div class="location-map fade-up">
+      <iframe
+        class="map-iframe"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3193.5!2d174.7595!3d-36.9183!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d0d482b3bb42d77%3A0x500ef868479a2d0!2s726+Manukau+Road%2C+Royal+Oak%2C+Auckland+1023!5e0!3m2!1sen!2snz!4v1"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="WAGYU SHOGUN — 726 Manukau Road, Royal Oak">
+      </iframe>
+      <div class="map-overlay">
+        <div class="map-address">726 Manukau Road, Royal Oak, Auckland 1023</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════
+     FOOTER
+══════════════════════════════ -->
+<footer role="contentinfo">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div>
+        <div class="footer-logo-main">WAGYU SHOGUN</div>
+        <div class="footer-logo-sub">和牛将軍</div>
+      </div>
+      <p>JA-certified A5 Kagoshima Kuroge Wagyu &amp; Iwate Iwachiku Wagyu. Authentic self-style Yakiniku in Royal Oak, Auckland.</p>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/wagyushogun/" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+        <a href="https://www.facebook.com/wagyushogun/" target="_blank" rel="noopener" aria-label="Facebook">FB</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="#experience">The Experience</a></li>
+        <li><a href="our-journey.html">Our Journey</a></li>
+        <li><a href="careers.html">Careers</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Visit</h4>
+      <ul>
+        <li><a href="#location">726 Manukau Road</a></li>
+        <li><a href="#location">Royal Oak, Auckland 1023</a></li>
+        <li><a href="tel:+6496505050">09 650 5050</a></li>
+        <li><a href="mailto:hello@wagyushogun.com">hello@wagyushogun.com</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Reserve</h4>
+      <ul>
+        <li><a href="https://www.wagyushogun.com/booking" target="_blank" rel="noopener">Book a Table</a></li>
+        <li><a href="https://www.wagyushogun.com/booking" target="_blank" rel="noopener">Group Dining</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 WAGYU SHOGUN. All rights reserved. Royal Oak, Auckland, New Zealand.</p>
+    <div class="footer-legal">
+      <a href="https://www.wagyushogun.com/terms-and-conditions" target="_blank" rel="noopener">Terms &amp; Conditions</a>
+      <a href="https://www.wagyushogun.com/privacy-policy" target="_blank" rel="noopener">Privacy Policy</a>
+      <a href="https://www.wagyushogun.com/refund-policy" target="_blank" rel="noopener">Refund Policy</a>
+      <a href="https://www.wagyushogun.com/accessibility-statement" target="_blank" rel="noopener">Accessibility</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
